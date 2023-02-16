@@ -10,7 +10,6 @@ phases:
   build:
     commands:
       - echo build Docker image on `date`
-      - cd src
       - docker build -t group1:latest .
       - docker tag group1:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/akash-capstone2-testrepo:latest
   post_build:
