@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: group1-eks-cluster
+    app.kubernetes.io/instance: group1-eks-cluster-instance
+    app.kubernetes.io/version: '1.0.0'
+    app.kubernetes.io/managed-by: kubectl
+  name: group1-eks-cluster-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: group1-eks-cluster
+    template:
+      metadata:
+        labels:
+          app: group1-eks-cluster
+        spec:
+          containers:
+            - image: 962804699607.dkr.ecr.us-west-2.amazonaws.com/akash-capstone2-testrepo:latest
+              imagePullPolicy: Always
+              name: group1-eks-cluster
+              ports:
+                - containerPort: 3000
