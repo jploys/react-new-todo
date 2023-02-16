@@ -21,3 +21,4 @@ EXPOSE 3000
 
 # start node app
 CMD ["npm", "start"]
+
