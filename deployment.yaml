@@ -16,10 +16,11 @@ spec:
     metadata:
       labels:
         app: group1-eks-cluster
-      spec:
-        containers:
-          - image: 962804699607.dkr.ecr.us-west-2.amazonaws.com/akash-capstone2-testrepo:latest
-            imagePullPolicy: Always
-            name: group1-eks-cluster
-            ports:
-              - containerPort: 3000
+    spec:
+      containers:
+        - image: 962804699607.dkr.ecr.us-west-2.amazonaws.com/akash-capstone2-testrepo:latest
+          imagePullPolicy: Always
+          name: group1-eks-cluster
+          ports:
+            - containerPort: 3000
+
